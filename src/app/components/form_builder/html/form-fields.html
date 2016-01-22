@@ -1,0 +1,47 @@
+<div ng-repeat="field in fields">
+    <div class="form-group">
+        <div data-ng-switch on="field.type">
+            <!-- text input -->
+            <div data-ng-switch-when="text">
+                <label class="control-label" ng-class="{'required':field.is_required}">{{field.label}}</label>
+                <input type="text" class="form-control">
+            </div>
+
+            <!-- text input -->
+            <div data-ng-switch-when="textarea">
+                <label>{{field.label}}</label>
+                <textarea class="form-control"></textarea>
+            </div>
+
+            <!-- button -->
+            <div data-ng-switch-when="button">
+                <button type="submit" class="btn btn-primary">{{field.label}}</button>
+            </div>
+            
+            <!-- checkbox -->
+            <div data-ng-switch-when="checkbox">
+               <div class="checkbox">
+                    <label ng-class="{'required':field.is_required}">{{field.label}}</label>
+                    <input type="checkbox" ng-model="field.id" name="field.id">
+                </div>
+            </div>
+            
+            <!-- radio -->
+            <div data-ng-switch-when="radio">
+                <div ng-repeat="option in field.options">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" ng-model="option.id" name="field.id" id="{{option.id}}"> {{option.label}}
+                        </label>
+                    </div>
+                </div> 
+            </div>
+            
+            <div data-ng-switch-when="datepicker">
+                <label>{{field.label}}</label>
+                <input type="text" class="form-control datepicker" data-all-dates="true" data-date-format="yyyy-mm-dd" ng-model="datepicker">
+            </div>
+            
+        </div>
+    </div>
+</div>

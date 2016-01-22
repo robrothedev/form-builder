@@ -1,0 +1,18 @@
+<h1>Forms</h1>
+
+<form-title-input title="{{form_list_ctrl.form.title}}" on-submit="form_list_ctrl.createForm"></form-title-input>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Form Title</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="form in form_list_ctrl.forms">
+			<td>{{form.title}}</td>
+			<td class="pull-right"><button class="btn btn-default btn-sm" ng-click="form_list_ctrl.editForm(form)">Edit</button></td>
+		</tr>
+	</tbody>
+</table>

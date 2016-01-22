@@ -1,0 +1,10 @@
+<!-- toolbar -->
+<ul class="field-toolbar">
+    <li><i id="popover{{$index}}" class="fa fa-gear" popover-placement="bottom" popover-template="popover_template" open-popover></i></li>
+    <li><i class="fa fa-trash-o" ng-click="removeField()"></i></li>
+    <li><i class="fa fa-bars"></i></li>
+</ul>
+
+<div ng-if="field.type != 'checkbox'">
+    <label ng-class="{'required':field.is_required}"><span ng-if="!field.label">Label</span>{{field.label}}</label>
+</div>

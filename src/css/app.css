@@ -1,0 +1,29 @@
+html {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  	font-family: "HelveticaNeue-Light", "Helvetica Neue Light","Helvetica","Arial",sans-serif;
+	color:#444;
+	height:100%;
+}
+
+.container-fluid {
+	padding:0 40px !important;
+}
+
+spinner {
+	display:block;
+	text-align:center;
+	color:#999;
+}
+
+.alert .btn-link {
+	padding:0;
+}
+
+footer {
+	display:block;
+	padding:60px;
+}

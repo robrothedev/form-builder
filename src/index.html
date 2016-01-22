@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+<meta charset="utf-8">
+<title>Angular Form Builder</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<link rel="shortcut icon" href="#">
+
+<!-- styles to be replaced for a build -->
+<!-- build:libstyles -->
+<link rel="stylesheet" href="bower_components/animate.css/animate.css">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+<!-- endbuild -->
+
+<!-- build:appstyles -->
+<link rel="stylesheet" href="app/components/form_builder/css/form-builder.css">
+<link rel="stylesheet" href="css/app.css">
+<!-- endbuild -->
+
+<!-- build:jquery -->
+<!-- endbuild -->
+
+<!-- build:momentjs -->
+<!-- endbuild -->
+
+<!-- scripts to be replaced for a build -->
+<!-- build:libscripts -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<!-- endbuild -->
+
+<script src="app/app.js"></script>
+
+</head>
+
+<body ng-controller="AppCtrl as app_ctrl" ng-cloak>
+	<div class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#/">Form Builder</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- content -->
+	<div class="container-fluid" id="content">
+
+		<div ui-view></div>
+
+	</div>
+
+	<footer></footer>
+
+</body>
+</html>

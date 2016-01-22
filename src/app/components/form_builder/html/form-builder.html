@@ -1,0 +1,63 @@
+<h1><a href="#/">Forms</a> <span class="fa fa-angle-right"></span> Form Builder</h1>
+
+<form-title-input title="{{form_builder_ctrl.form.title}}" on-submit="form_builder_ctrl.saveForm"></form-title-input>
+
+<!-- form builder -->
+<!-- error messages -->
+<div ng-if="form_builder_ctrl.error" class="alert alert-danger">
+    <strong>{{form_builder_ctrl.error.error.message}}</strong>
+    <ul>
+        <li ng-repeat="e in form_builder_ctrl.error.error.error_list" ng-show="e.error_id >= 0">{{e.label}} (Type: {{e.type}} - Order:{{$index}})</li>
+    </ul>
+</div>
+
+<!-- saved alert -->
+<div ng-if="form_builder_ctrl.saved" class="alert alert-success" ng-class="{'animated fadeIn':form_builder_ctrl.saved, 'animated fadeOut':form_builder_ctrl.save_fade}">
+    <strong><span class="fa fa-check"></span> Your form was successfully saved!</strong>
+</div>
+
+<div class="row">
+    <div class="col-sm-10">
+        <!-- tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="active"><a href="#build"  target="_self" data-toggle="tab">Build</a></li>
+            <li><a href="#preview" target="_self" data-toggle="tab">Preview</a></li>
+        </ul>
+
+        <!-- tab content -->
+        <div class="tab-content">
+
+            <!-- form builder -->
+            <div class="tab-pane active" id="build">
+
+                <!-- draggable fields -->
+                <form-builder-fields
+                    form="form_builder_ctrl.form"
+                    drag-stop="form_builder_ctrl.sortFields">
+                </form-builder-fields>
+
+            </div>
+
+            <!-- preview form -->
+            <div class="tab-pane" id="preview">
+
+                <h2>{{form.title}}</h2>
+                <form-fields
+                    fields="form_builder_ctrl.form.fields">
+                </form-fields>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-2">
+        <!-- form fields to add to the builder -->
+        <div class="well well-sm field-type-list">
+            <ul class="list-unstyled">
+                <li ng-repeat="field in form_builder_ctrl.field_types">
+                    <button ng-click="form_builder_ctrl.addField(field.type)" class="btn btn-block btn-info"><span class="fa fa-plus"></span> {{field.label}}</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

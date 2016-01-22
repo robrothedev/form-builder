@@ -1,0 +1,102 @@
+.table td:first-child {
+    font-size:18px;
+}
+
+.tab-pane {
+    padding:20px;
+}
+
+.field-type-list {
+    position:fixed;
+}
+
+.field-type-list ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.field-type-list ul li {
+    margin-bottom:10px;
+}
+
+.field-type-list ul li:last-child {
+    margin-bottom:0;
+}
+
+
+.new-form-field {
+    padding:20px;
+    background:#efefef;
+    border:1px solid silver;
+    border-radius:4px;
+}
+
+.field-options {  
+    padding:20px;
+    width:240px;
+}
+
+.field-options input[type='text'] {
+    width:240px;
+}
+
+.btn-add-option {
+    float:right;
+    color:green;
+    font-size:12px;
+}
+
+.btn-remove-option {
+    float:right;
+    color:red;
+    font-size:12px;
+}
+
+.field-toolbar {
+    list-style:none;
+    padding-left:0;
+    float:right;
+    position:relative;
+    top:-12px;
+}
+
+.field-toolbar li {
+    display:inline;
+    padding:12px 6px;
+    cursor:pointer;
+    font-size:24px;
+    color:#777;
+}
+
+.field-toolbar li:hover {
+    color:#333;
+}
+
+.field-toolbar li .fa-bars {
+    cursor:move;
+}
+
+.field-toolbarli i {
+    text-shadow:#fff 0 1px 0;
+}
+
+.required:after {
+    content:' *';
+    color:red !important;
+}
+
+.field-multiple-options input {
+    width:100px !important;
+    display:inline-block !important;
+}
+
+.popover .checkbox label {
+    position:relative;
+    top:-12px;
+}
+
+.field-id-error .new-form-field {
+    background:#f1dede !important;
+    border:1px solid #CD5C5C !important;
+}

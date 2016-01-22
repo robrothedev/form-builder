@@ -1,0 +1,27 @@
+{
+  "name": "Angular Gulp Build Syetem",
+  "version": "0.0.0",
+  "authors": [
+    "Rob Rothe <robrothe@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.4.0",
+    "bootstrap": "~3.3.4",
+    "jquery": "~2.1.4",
+    "angular": "~1.4.0",
+    "angular-ui-router": "~0.2.15",
+    "angular-cookies": "~1.4.0",
+    "angular-bootstrap": "~0.13.4",
+    "jquery-ui": "~1.11.4",
+    "animate.css": "~3.5.1",
+    "google-fonts": "*"
+  }
+}

@@ -1,0 +1,50 @@
+ <div ng-repeat="field in form.fields" id="{{$index}}">
+    <div class="form-group">
+        <div data-ng-switch on="field.type" class="new-form-field">
+            <!-- text input -->
+            <div data-ng-switch-when="text">
+                <field-toolbar field="field"></field-toolbar>
+                <input type="text" class="form-control">
+            </div>
+
+            <!-- textarea input -->
+            <div data-ng-switch-when="textarea">
+                <field-toolbar field="field"></field-toolbar>
+                <textarea class="form-control"></textarea>
+            </div>
+    
+            <!-- number input -->
+            <div data-ng-switch-when="number">
+                <field-toolbar field="field"></field-toolbar>
+                <input type="number" class="form-control">
+            </div>
+
+            <!-- checkbox -->
+            <div data-ng-switch-when="checkbox">
+               <field-toolbar field="field"></field-toolbar>
+               <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-true-value="true" ng-false-value="false"> <span ng-if="!field.label">Label</span>{{field.label}}
+                    </label>
+                </div>
+            </div>
+
+            <!-- radio -->
+            <div data-ng-switch-when="radio">
+               <field-toolbar field="field"></field-toolbar>
+               <div class="radio" ng-repeat="option in field.options">
+                    <label>
+                        <input type="radio"> {{option.label}}
+                    </label>
+                </div>
+            </div>
+            
+            <!-- datepicker -->
+            <div data-ng-switch-when="datepicker">
+               <field-toolbar field="field"></field-toolbar>
+               <input type="text" class="form-control datepicker" data-all-dates="true" ng-model="date" data-date-format="yyyy-mm-dd" ng-model="datepicker">
+            </div>
+                        
+         </div>
+    </div>
+</div>
